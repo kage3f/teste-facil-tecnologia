@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www
+      - /var/www/vendor
+    ports:
+      - "8888:8888"
+    environment:
+      JWT_SECRET: ${JWT_SECRET}  # Carrega a variável JWT_SECRET do .env
+    depends_on:
+      - db
+    command: sh -c "php src/migrations.php && php -S 0.0.0.0:8888 -t public"
+
+  db:
+    image: postgres:14-alpine  # Usa a imagem do PostgreSQL
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}  # Carrega a variável do .env
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}  # Carrega a variável do .env
+      POSTGRES_DB: ${POSTGRES_DB}  # Carrega a variável do .env
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+volumes:
+  dbdata:
