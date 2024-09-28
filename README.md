@@ -49,7 +49,7 @@ Este é um projeto de Gestão de Contratos composto por um backend em PHP (com a
 1. Clone o repositório e navegue até a pasta do backend:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/kage3f/teste-facil-tecnologia
    cd backend-api
    ```
 
