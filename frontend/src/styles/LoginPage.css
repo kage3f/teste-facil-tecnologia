@@ -1,0 +1,43 @@
+/* Layout geral da página de login */
+.login-page {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Estilo da metade com a imagem */
+  .login-image {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../imgs/bg-login.png');
+    background-position-y: -50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Estilo da metade com o formulário de login */
+  .login-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 113px;
+  }
+
+  .login-form h1 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+
+  .login-form p {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .login-image div {
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
