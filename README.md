@@ -1,11 +1,12 @@
 Projeto de Gestão de Contratos
-Este é um projeto de Gestão de Contratos que consiste em um backend construído em PHP (com autenticação JWT) e um frontend em React. Ele permite o gerenciamento de contratos e usuários (gestores e usuários).
+Este é um projeto de Gestão de Contratos composto por um backend em PHP (com autenticação JWT) e um frontend em React. O sistema permite o gerenciamento de contratos e usuários, com diferentes níveis de permissão (usuários e gestores).
 
-Tecnologias Utilizadas
-Backend: PHP com JWT (JSON Web Token), PostgreSQL, Docker
+🚀 Tecnologias Utilizadas
+Backend: PHP, JWT (JSON Web Token), PostgreSQL, Docker
 Frontend: React.js, JWT para autenticação
+Containerização: Docker e Docker Compose
 📁 Estrutura do Projeto
-java
+plaintext
 Copiar código
 ├── backend/
 │   ├── public/
@@ -21,34 +22,41 @@ Copiar código
 │   ├── docker-compose.yml
 │   ├── package.json
 │   └── README.md
+
 🖥️ Como Rodar o Backend
 Pré-requisitos
-PHP: Instalar PHP 8.0 ou superior
-Composer: Gerenciador de dependências do PHP (instale em https://getcomposer.org/)
+PHP: Instale PHP 8.0 ou superior
+Composer: Gerenciador de dependências do PHP (https://getcomposer.org/)
 Docker e Docker Compose: Para rodar a aplicação com PostgreSQL
 Passo a Passo
-Clone o repositório:
+Clone o repositório e navegue até a pasta do backend:
+
 bash
 Copiar código
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd backend
-Copie o arquivo .env.example para .env e configure as variáveis de ambiente, como a chave JWT e as credenciais do banco de dados.
+git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/kage3f/teste-facil-tecnologia)
+cd backend-api
+Copie o arquivo .env.example para .env e configure as variáveis de ambiente, como a chave JWT e as credenciais do banco de dados:
+
 bash
 Copiar código
 cp .env.example .env
 Instale as dependências do PHP usando o Composer:
+
 bash
 Copiar código
 composer install
-Inicie os containers Docker para rodar o PostgreSQL:
+Construa e suba os containers Docker (incluindo o PostgreSQL):
+
 bash
 Copiar código
-docker-compose up -d
+docker-compose up -d --build
 Rode as migrações para criar as tabelas no banco de dados:
+
 bash
 Copiar código
 php src/migrations.php
 Inicie o servidor PHP:
+
 bash
 Copiar código
 php -S localhost:8888 -t public
@@ -71,20 +79,24 @@ Node.js: Instale o Node.js versão 14 ou superior
 NPM: Gerenciador de pacotes do Node.js (vem com o Node)
 Docker e Docker Compose
 Passo a Passo
-Clone o repositório:
+Clone o repositório e navegue até a pasta do frontend:
+
 bash
 Copiar código
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/kage3f/teste-facil-tecnologia
 cd frontend
 Instale as dependências do projeto:
+
 bash
 Copiar código
 npm install
-Inicie os containers Docker (opcional, caso precise de serviços como o banco de dados em conjunto com o backend):
+Construa e suba os containers Docker (caso esteja rodando em conjunto com o backend):
+
 bash
 Copiar código
-docker-compose up -d
+docker-compose up -d --build
 Inicie o servidor de desenvolvimento:
+
 bash
 Copiar código
 npm start
@@ -93,12 +105,5 @@ Autenticação: O usuário pode fazer login com um nome de usuário e senha.
 Gerenciamento de Contratos: Criação, edição e exclusão de contratos.
 Gerenciamento de Usuários: Apenas usuários com função de gestor podem gerenciar outros usuários.
 📋 Notas Finais
-Variáveis de Ambiente: Certifique-se de configurar as variáveis de ambiente tanto no backend quanto no frontend.
-Docker: Você pode usar Docker para rodar o banco de dados e serviços de forma isolada e garantir a consistência no ambiente de desenvolvimento.
-Sinta-se à vontade para contribuir ou reportar problemas abrindo uma issue no repositório!
+Obrigado pela oportunidade!
 
-🚀 Tecnologias Utilizadas
-PHP com PostgreSQL para o backend
-React.js para o frontend
-JWT (JSON Web Tokens) para autenticação
-Docker para containerização
