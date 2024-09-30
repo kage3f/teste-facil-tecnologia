@@ -129,12 +129,6 @@ Este é um projeto de Gestão de Contratos composto por um backend em PHP (com a
    docker-compose up -d --build
    ```
 
-4. Inicie o servidor de desenvolvimento:
-
-   ```bash
-   npm start
-   ```
-
 ## Funcionalidades Principais
 
 - **Autenticação**: O usuário pode fazer login com um nome de usuário e senha.
